@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./components/Button/Button"
 import './header.css';
 
-const Header = () => {
+function Header () {
 
     const onClose = () => {
         tg.close()

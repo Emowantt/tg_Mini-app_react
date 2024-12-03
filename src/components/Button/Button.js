@@ -1,7 +1,7 @@
 import React from "react";
 import './button.css'; 
 
-const Button = (props) => {
+function Button (props) {
     return (
         <button {...props} className= {"button" + props.className}/>
     );
