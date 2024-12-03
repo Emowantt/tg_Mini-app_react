@@ -159,19 +159,6 @@ header .shop_Cart .item .delete_order:hover {
   background-color: #a31212;
 }
 
-
-
-header .presentation {
-  margin: 50px 0;
-  background: url('./img/present.jpg') no-repeat;
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center center;
-  background-color: #333333;
-  border-radius: 10px 10px;
-}
-
 .full_item, .modal-overlay {
   position: fixed;
   top: 0;
