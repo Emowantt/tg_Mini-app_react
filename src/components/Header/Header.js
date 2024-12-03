@@ -3,6 +3,8 @@ import './header.css';
 import Button from "../Button/Button";
 
 function Header () {
+    
+    const tg = window.Telegram.WebApp;
 
     const onClose = () => {
         tg.close()
@@ -11,7 +13,9 @@ function Header () {
     return (
         <div>
             <Button onClick={onClose}>Закрыть</Button>
-            <span className="username"></span>
+            <span className="username">
+                {tg.initDataUnsafe?.user?.username}
+            </span>
         </div>
     )
 }
