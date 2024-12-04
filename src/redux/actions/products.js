@@ -1,5 +1,5 @@
 
-import productsData from './products.json'; // Импортируйте данные из файла
+import productsData from "../../products";
 
 export const setLoaded = (payload) => ({
   type: 'SET_LOADED',
