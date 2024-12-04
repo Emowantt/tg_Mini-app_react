@@ -10,7 +10,7 @@ const initialState = {
       price: 29.99, // Измени на число, если это необходимо
     },
   ],
-  isLoaded: true,
+  isLoaded: false,
 }
 
 const products = (state = initialState, action) => {
