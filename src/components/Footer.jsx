@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__copyright">
-          <span><FaRegCopyright /> StarkElessar {currentYear}</span>
+          <span><FaRegCopyright /> Wohash {currentYear}</span>
         </div>
       </div>
     </footer>
