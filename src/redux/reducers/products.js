@@ -3,7 +3,7 @@ const initialState = {
     {
       id: 1,
       title: 'Зов Ктулху',
-      imgUrl: '1.jpg', // Обрати внимание, что в ProductCard используется imgUrl
+      imgUrl: 'https://avatars.mds.yandex.net/get-mpic/4785755/img_id5868477902003074790.jpeg/orig', // Обрати внимание, что в ProductCard используется imgUrl
       brand: 'Говард Филлипс Лавкрафт', // Переименуй, если нужно
       category: 'Ужасы',
       desc: 'Lorem ipsum',
