@@ -1,19 +1,35 @@
-import axios from 'axios'
+
+import productsData from './products.json'; // Импортируйте данные из файла
 
 export const setLoaded = (payload) => ({
   type: 'SET_LOADED',
   payload,
-})
+});
 
 export const fetchProducts = (category, sortBy) => (dispatch) => {
-  const activeCategoryTag = category.brand === 'all' ? '' : `brand=${category.brand}`
+  const activeCategoryTag = category.brand === 'all' ? '' : `brand=${category.brand}`;
   
-  dispatch(setLoaded(false))
-  axios.get(`/products?${activeCategoryTag}&_sort=${sortBy.path}&_order=${sortBy.type}`)
-    .then(({ data }) => dispatch(setProducts(data)))
-}
+  dispatch(setLoaded(false));
+
+  // Вместо axios.get используем локальные данные
+  const filteredProducts = productsData.filter(product => 
+    activeCategoryTag ? product.brand === category.brand : true
+  );
+
+  // Сортировка продуктов
+  const sortedProducts = filteredProducts.sort((a, b) => {
+    if (sortBy.type === 'asc') {
+      return a[sortBy.path] > b[sortBy.path] ? 1 : -1;
+    } else {
+      return a[sortBy.path] < b[sortBy.path] ? 1 : -1;
+    }
+  });
+
+  // Диспатчим загруженные продукты
+  dispatch(setProducts(sortedProducts));
+};
 
 export const setProducts = (items) => ({
   type: 'SET_PRODUCTS',
   payload: items,
-})
+});
