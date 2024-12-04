@@ -3,11 +3,11 @@ import Delivery from './Delivery'
 
 
 const ProductCard = ({ ...objectCard }) => {
-  const {id, title, price, imgUrl, brand, delivery, onClickAddToCart} = {...objectCard}
+  const {id, title, price, imgUrl, autor, delivery, onClickAddToCart} = {...objectCard}
   const fixedPrice = price.toFixed(2)
   const bonusCost = (price / 100).toFixed(2)
 
-  const handleClickToCart = () => onClickAddToCart({id, title, price, imgUrl, brand})
+  const handleClickToCart = () => onClickAddToCart({id, title, price, imgUrl, autor})
 
   return (
     <article className='catalog__item product-card'>
