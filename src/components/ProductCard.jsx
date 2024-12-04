@@ -16,7 +16,7 @@ const ProductCard = ({ ...objectCard }) => {
       </div>
 
       <div className="product-card__img">
-        <img src={imgUrl} alt='Washing Machine'/>
+        <img src={imgUrl} alt={title}/>
         {delivery && <Delivery />}
       </div>
 

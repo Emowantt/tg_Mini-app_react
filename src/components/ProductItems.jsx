@@ -8,6 +8,7 @@ import CardSkeleton from './CardSkeleton'
 const ProductItems = () => {
   const dispatch = useDispatch()
   const { items, isLoaded } = useSelector(({ products }) => products)
+  console.log(items);
 
   const dispatchAddItemToCart = useCallback((productObject) => {
     dispatch(addProductToCart(productObject))
