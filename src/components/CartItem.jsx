@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa"
 
 const CartItem = (props) => {
-  const { id, imgUrl, title, brand } = props.objectProduct
+  const { id, imgUrl, title, autor } = props.objectProduct
 
   const handleDecItem     = () => props.decCartItem(id)
   const handleIncItem     = () => props.incCartItem(id)
