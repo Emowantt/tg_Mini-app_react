@@ -32,7 +32,7 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className="cart-item__price">
-        <span>{props.currentTotalPrice} Br</span>
+        <span>{props.currentTotalPrice} ₽</span>
       </div>
       <div className="cart-item__delete" onClick={handleRemoveItem}>
         <FaRegTimesCircle />
